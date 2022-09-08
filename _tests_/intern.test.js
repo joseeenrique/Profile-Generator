@@ -1,8 +1,8 @@
-//import engineer
-const Engineer = require('../lib/Engineer');
+//import eintern
+const Intern = require('../lib/Intern');
 
-describe("Engineer", () =>{
-const addedEngineer = {
+describe("Intern", () =>{
+const addedIntern = {
     name: 'Alec',
     id: 002,
     email: 'a1@gmail.com',
@@ -11,18 +11,18 @@ const addedEngineer = {
 
 //constructor tests
 describe('constructor test', () =>{
-    test('new set of engineer class', () =>{
-        const engineer = new Engineer(addedEngineer);
-        expect(engineer).toBeInstanceOf(Engineer);
+    test('new set of eintern class', () =>{
+        const eintern = new Eintern(addedEintern);
+        expect(eintern).toBeInstanceOf(Eintern);
     });
-    test('expect new set of engineer class w/ name id and email', () => {
-        const engineer = new Engineer(addedEngineer);
-        expect(engineer).toEqual({
+    test('expect new set of eintern class w/ name id and email', () => {
+        const eintern = new Eintern(addedEintern);
+        expect(eintern).toEqual({
      name: 'Alec',
      id: 002,
      email: 'a1@gmail.com',
      github: 'www.github.com',
-     role: 'Engineer',
+     role: 'Eintern',
     });
    })
   });
@@ -31,28 +31,28 @@ describe('constructor test', () =>{
 //test name
 describe('method tests', () =>{
     test('expect name with getName method', () =>{
-        const engineer = new Engineer(addedEngineer);
-        expect(engineer.getName()).toEqual('Alec');
+        const eintern = new Eintern(addedEintern);
+        expect(eintern.getName()).toEqual('Alec');
     });
 
 
 //test ID
 describe('method tests', () =>{
 test('expect id with getid method', () =>{
-    const engineer = new Engineer(addedEngineer);
-    expect(engineer.getid()).toEqual(002);
+    const eintern = new Eintern(addedEintern);
+    expect(eintern.getid()).toEqual(002);
 });
 
 //test email
 describe('method tests', () =>{
     test('expect email with getEmail method', () =>{
-        const engineer = new Engineer(addedEngineer);
-        expect(engineer.getEmail()).toEqual('a1@gmail.com');
+        const eintern = new Eintern(addedEintern);
+        expect(eintern.getEmail()).toEqual('a1@gmail.com');
   });
   // github test
   test("expect github url", () =>{
-    const engineer = new Engineer(addedEngineer);
-    expect(engineer.  ()).toEqual('   ');
+    const eintern = new Eintern(addedEintern);
+    expect(eintern.  ()).toEqual('   ');
   })
  });
 });
