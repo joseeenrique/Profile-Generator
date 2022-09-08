@@ -1,20 +1,26 @@
 const inquirer = require('inquirer');
+
 const fs = require('fs');
 
 const Manager = require('./library/Manager');
-// const Employee = require('./library/Employee'); 
+ 
 const Engineer = require('./library/Engineer');
+
 const Intern = require('./library/Intern');
-const createPage = require ("./src/create-page")
-console.log("Welcome")
-console.log("answer questions to continue")
+
+const createPage = require ("./src/create-page");
+
+console.log("Welcome");
+
+console.log("answer questions to continue");
+
 const questions = [
     {
         type:"input",
         name:"title",
         message: "What is your name?",
-        validate: user_license => {
-            if (user_license){
+        validate: name_input => {
+            if (name_input){
                 return true;
             } else{
                 console.log("Please enter your name");
@@ -73,8 +79,8 @@ const questions = [
     name:"license",
     message: "choose license",
     choices: ["MPL 2.0","APACHE","MIT","NONE"],
-    validate: user_license => {
-        if (user_license){
+    validate: name_input => {
+        if (name_input){
             return true;
         } else{
             console.log("Select license");
