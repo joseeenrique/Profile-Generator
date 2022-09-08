@@ -44,7 +44,7 @@ test('expect id with getid method', () =>{
 describe('method tests', () =>{
     test('expect email with getEmail method', () =>{
         const employee = new Employee(addedEmployee);
-        expect(employee.getEmail()).toEqual('tammerjames@gmail.com');
+        expect(employee.()).toEqual('  ');
   });
  });
 });

@@ -6,21 +6,23 @@ const addedEngineer = {
     name: 'Alec',
     id: 002,
     email: 'a1@gmail.com',
-    github: 'www.github.com/a1sauce',
+    github: 'www.github.com',
 };
 
 //constructor tests
 describe('constructor test', () =>{
-    test('new set of employee class', () =>{
-        const employee = new Employee(addedEmployee);
-        expect(employee).toBeInstanceOf(Employee);
+    test('new set of engineer class', () =>{
+        const engineer = new Engineer(addedEngineer);
+        expect(engineer).toBeInstanceOf(Engineer);
     });
-    test('expect new set of employee class w/ name id and email', () => {
-        const employee = new Employee(addedEmployee);
-        expect(employee).toEqual({
-     name: 'Tammer',
-    id: 001,
-    email: 'tammerjames@gmail.com',
+    test('expect new set of engineer class w/ name id and email', () => {
+        const engineer = new Engineer(addedEngineer);
+        expect(engineer).toEqual({
+     name: 'Alec',
+     id: 002,
+     email: 'a1@gmail.com',
+     github: 'www.github.com',
+     role: 'Engineer',
     });
    })
   });
@@ -29,23 +31,28 @@ describe('constructor test', () =>{
 //test name
 describe('method tests', () =>{
     test('expect name with getName method', () =>{
-        const employee = new Employee(addedEmployee);
-        expect(employee.getName()).toEqual('Tammer');
+        const engineer = new Engineer(addedEngineer);
+        expect(engineer.getName()).toEqual('Alec');
     });
 
 
 //test ID
 describe('method tests', () =>{
 test('expect id with getid method', () =>{
-    const employee = new Employee(addedEmployee);
-    expect(employee.getid()).toEqual(001);
+    const engineer = new Engineer(addedEngineer);
+    expect(engineer.getid()).toEqual(002);
 });
 
 //test email
 describe('method tests', () =>{
     test('expect email with getEmail method', () =>{
-        const employee = new Employee(addedEmployee);
-        expect(employee.getEmail()).toEqual('tammerjames@gmail.com');
+        const engineer = new Engineer(addedEngineer);
+        expect(engineer.getEmail()).toEqual('a1@gmail.com');
   });
+  // github test
+  test("expect github url", () =>{
+    const engineer = new Engineer(addedEngineer);
+    expect(engineer.  ()).toEqual('   ');
+  })
  });
 });
