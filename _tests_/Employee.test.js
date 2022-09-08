@@ -25,17 +25,26 @@ describe('constructor test', () =>{
   });
 
 //method tests
+//test name
 describe('method tests', () =>{
-test('expect id with getid method')
+    test('expect name with getName method', () =>{
+        const employee = new Employee(addedEmployee);
+        expect(employee.getName()).toEqual('Tammer');
+    });
 
 
+//test ID
+describe('method tests', () =>{
+test('expect id with getid method', () =>{
+    const employee = new Employee(addedEmployee);
+    expect(employee.getid()).toEqual(001);
+});
 
-})
-
-
-
-
-
-
-
+//test email
+describe('method tests', () =>{
+    test('expect email with getEmail method', () =>{
+        const employee = new Employee(addedEmployee);
+        expect(employee.getEmail()).toEqual('tammerjames@gmail.com');
+  });
  });
+});
