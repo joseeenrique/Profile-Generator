@@ -31,7 +31,7 @@ const questions = [
         type: "list",
         name: "role",
         message: "What role does the employee have?",
-        choices: ["Engineer", "Intern", "Manager"]
+        choices: [ "Intern", "Engineer", "Manager"]
     },
     {
         //github
@@ -92,7 +92,20 @@ managerQuestions = [
  // create employee funtion
  const newEmployee = async () => {
     await inquirer.prompt(questions)
-      .then((response) => 
-      
-init();
+      .then((response) => {
+        let name = response.name;
+        let id = response.id;
+        let email = response.email;
+        let idNumber;
+        let github;
+        
 
+        if (role === "Engineer") {
+            inquirer.prompt(engineerQuestions).then((response) =>{
+                github = response.github;
+                let employee = new Engineer(name, id, email, github);
+                employeesArr.push(employee);
+                addEmployee(employeesArr);
+                });
+        };
+            
