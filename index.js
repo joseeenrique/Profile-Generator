@@ -40,6 +40,23 @@ const questions = [
         message: "What is the employee's github?"
     },
 ]
+// intern questions
+internQuestions = [
+    {
+        type: "input",
+        name: "idNumber",
+        message: "What is the ID number?",
+        validate: idNumber => {
+            if (idNumber) {
+                return true;
+            } else {
+                console.log("Please enter an ID number!");
+                return false;
+            }
+        }
+    }
+]
+
 // manager questions
 managerQuestions = [
     {
@@ -56,3 +73,8 @@ managerQuestions = [
         }
     }
 ]
+
+
+
+
+init();
