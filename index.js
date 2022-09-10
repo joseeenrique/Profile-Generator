@@ -89,7 +89,10 @@ managerQuestions = [
     }
 ]
 
-
-
-
+ // create employee funtion
+ const newEmployee = async () => {
+    await inquirer.prompt(questions)
+      .then((response) => 
+      
 init();
+
