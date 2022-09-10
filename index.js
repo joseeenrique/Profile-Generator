@@ -56,7 +56,22 @@ internQuestions = [
         }
     }
 ]
-
+// engineer questions
+engineerQuestions = [
+    {
+        type: "input",
+        name: "idNumber",
+        message: "What is the ID number?",
+        validate: idNumber => {
+            if (idNumber) {
+                return true;
+            } else {
+                console.log("Please enter an ID number!");
+                return false;
+            }
+        }
+    }
+]
 // manager questions
 managerQuestions = [
     {
