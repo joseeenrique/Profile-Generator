@@ -88,28 +88,7 @@ managerQuestions = [
         }
     }
 ]
-//init function
-const init = () => {
-    if (fs.existsSync(filePath)) {
-        inquirer.prompt({
-            type: "confirm",
-            message: "It looks like the index.html file in the 'dist' folder already exists. Do you want to overwrite it?",
-            name: "overwrite"
-        }).then(async (response) => {
 
-            let overwrite = response.overwrite;
-            if (await overwrite === true) {
-                console.log("Please enter your team information:")
-                newEmployee()
-            } else if (await overwrite === false) {
-                console.log("Your index.html file in the 'dist' folder will not be overwritten. Please move the current index.html file to another folder before restarting.")
-            }
-        })
-    } else {
-        console.log("Welcome to the team profile generator. Please enter your team information below:")
-        newEmployee()
-    }
-};  
  // create employee funtion
  const newEmployee = async () => {
     await inquirer.prompt(questions)
@@ -137,4 +116,4 @@ const init = () => {
                     addEmployee(employeesArr);
                 });
             }
-           init();
+           
