@@ -8,3 +8,4 @@ const renderHTML = employees => {
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => renderManager(manager))
       );
+      
