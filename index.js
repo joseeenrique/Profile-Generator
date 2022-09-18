@@ -115,5 +115,5 @@ managerQuestions = [
                     employeesArr.push(employee);
                     addEmployee(employeesArr);
                 });
-            }
-           
+            };
+            init();
