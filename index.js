@@ -115,5 +115,13 @@ managerQuestions = [
                     employeesArr.push(employee);
                     addEmployee(employeesArr);
                 });
-            };
+            }
+            else if (role === "Intern") {
+                inquirer.prompt(internQuestions).then((response) =>{
+                        officeNumber = response.officeNumber;
+                        let employee = new Intern(name, id, email, officeNumber);
+                        employeesArr.push(employee);
+                        addEmployee(employeesArr);
+                    });
+                }
             init();
