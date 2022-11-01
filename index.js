@@ -124,4 +124,15 @@ managerQuestions = [
                         addEmployee(employeesArr);
                     });
                 }
-            init();
+        // function to generate HTML page file 
+const writeFile = data => {
+    fs.writeFile('/', data, err => {
+        // if there is an error 
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("your profile was created")
+        }
+    })
+}; 
